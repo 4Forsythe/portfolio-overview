@@ -1,0 +1,39 @@
+@use '@/scss/variables.scss' as *;
+
+.component {
+  gap: 10px;
+  padding: 18px 24px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: $background-color;
+  background-color: $primary-color;
+
+  transition: background-color 200ms ease-in-out;
+
+  &.sm {
+    gap: 6px;
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &.outlined {
+    color: $foreground-color;
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 25%);
+  }
+}
