@@ -1,0 +1,36 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .tableHead {
+    flex: 1;
+    display: flex;
+
+    .tableHeadRow {
+      flex: 1;
+      display: flex;
+      border-radius: 50px;
+
+      .tableHeadCol {
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 500;
+
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .tableContent {
+    height: 500px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    position: relative;
+  }
+}

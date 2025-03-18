@@ -1,0 +1,45 @@
+@use '@/scss/variables.scss' as *;
+
+.component {
+  inset: 0;
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+
+  position: fixed;
+  transition: opacity 200ms ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .container {
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    .inner {
+      z-index: 200;
+      width: 400px;
+      padding: 40px;
+      overflow: hidden;
+      border-radius: 20px;
+      background-color: $background-color;
+
+      position: relative;
+    }
+  }
+
+  .overlay {
+    inset: 0;
+    z-index: 100;
+    background-color: rgba($foreground-color, 0.5);
+
+    position: absolute;
+  }
+}

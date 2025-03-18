@@ -1,0 +1,25 @@
+@use '@/scss/variables.scss' as *;
+
+.component {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  &.sm {
+    .input {
+      font-size: 15px;
+    }
+  }
+
+  .input {
+    flex: 1;
+    padding: 8px 0;
+    font-weight: 600;
+    border-bottom: 1px solid $foreground-color;
+
+    &::placeholder {
+      color: rgba($foreground-color, 0.45);
+    }
+  }
+}

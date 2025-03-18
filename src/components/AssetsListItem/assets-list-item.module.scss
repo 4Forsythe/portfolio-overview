@@ -1,0 +1,31 @@
+@use '@/scss/variables.scss' as *;
+
+.component {
+  display: flex;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background-color: rgba($secondary-color, 0.5);
+  }
+
+  .cell {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    &.positive {
+      color: $positive-color;
+    }
+    &.negative {
+      color: $primary-color;
+    }
+  }
+}
