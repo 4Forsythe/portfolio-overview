@@ -50,21 +50,19 @@ export const Overview: React.FC = () => {
   }, [lastJsonMessage]);
 
   return (
-    <Container>
-      <div className={styles.page}>
-        {isLoading && (
-          <div className={styles.loader}>
-            <Spinner />
-          </div>
-        )}
+    <Container className={styles.page}>
+      {isLoading && (
+        <div className={styles.loader}>
+          <Spinner />
+        </div>
+      )}
 
-        {!assets ||
-          (assets.length === 0 && (
-            <EmptyBlock description='У вас пока нет активов. Добавьте что-нибудь, чтобы начать!' />
-          ))}
+      {!assets ||
+        (assets.length === 0 && (
+          <EmptyBlock description='У вас пока нет активов. Добавьте что-нибудь, чтобы начать!' />
+        ))}
 
-        {assets && assets.length > 0 && <AssetsList items={assets} />}
-      </div>
+      {assets && assets.length > 0 && <AssetsList items={assets} />}
     </Container>
   );
 };
